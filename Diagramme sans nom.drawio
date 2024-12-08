@@ -4,30 +4,30 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="dA6-tcw_dBqociSrExmY-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="actor-admin" target="uc-display-countries">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="180" y="500" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="180" y="250" />
-              <mxPoint x="180" y="480" />
-              <mxPoint x="380" y="480" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
         <mxCell id="actor-admin" value="Administrateur" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" parent="1" vertex="1">
           <mxGeometry x="100" y="200" width="50" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="hi8S8jJJ274nu1eD_c6z-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="124" y="487" as="targetPoint" />
+            <mxPoint x="124" y="327" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="124" y="437" />
+              <mxPoint x="124" y="437" />
+            </Array>
+          </mxGeometry>
         </mxCell>
         <mxCell id="actor-eleve" value="Élève" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" parent="1" vertex="1">
           <mxGeometry x="100" y="500" width="50" height="100" as="geometry" />
         </mxCell>
         <mxCell id="uc-add-country" value="Ajouter un pays" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="300" y="200" width="160" height="60" as="geometry" />
+          <mxGeometry x="560" y="131" width="160" height="60" as="geometry" />
         </mxCell>
         <mxCell id="uc-modify-country" value="Modifier un pays" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="300" y="300" width="160" height="60" as="geometry" />
+          <mxGeometry x="590" y="244" width="160" height="60" as="geometry" />
         </mxCell>
         <mxCell id="uc-delete-country" value="Supprimer un pays" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="300" y="400" width="160" height="60" as="geometry" />
+          <mxGeometry x="570" y="361" width="160" height="60" as="geometry" />
         </mxCell>
         <mxCell id="uc-display-countries" value="Afficher les pays" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="300" y="500" width="160" height="60" as="geometry" />
@@ -35,18 +35,19 @@
         <mxCell id="uc-test-knowledge" value="Tester ses connaissances" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="300" y="600" width="160" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="conn-admin-add" style="edgeStyle=orthogonalEdgeStyle;" parent="1" source="actor-admin" target="uc-add-country" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="conn-admin-modify" style="edgeStyle=orthogonalEdgeStyle;" parent="1" source="actor-admin" target="uc-modify-country" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="conn-admin-delete" style="edgeStyle=orthogonalEdgeStyle;" parent="1" source="actor-admin" target="uc-delete-country" edge="1">
+        <mxCell id="conn-admin-add" style="edgeStyle=orthogonalEdgeStyle;" parent="1" target="uc-add-country" edge="1">
           <mxGeometry relative="1" as="geometry">
+            <mxPoint x="150" y="261" as="sourcePoint" />
             <Array as="points">
-              <mxPoint x="200" y="250" />
-              <mxPoint x="200" y="430" />
+              <mxPoint x="355" y="261" />
+              <mxPoint x="355" y="161" />
             </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="conn-admin-modify" style="edgeStyle=orthogonalEdgeStyle;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" target="uc-modify-country" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="140" y="261" as="sourcePoint" />
+            <mxPoint x="580" y="291" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="conn-eleve-display" style="edgeStyle=orthogonalEdgeStyle;" parent="1" source="actor-eleve" target="uc-display-countries" edge="1">
@@ -54,6 +55,12 @@
         </mxCell>
         <mxCell id="conn-eleve-test" style="edgeStyle=orthogonalEdgeStyle;" parent="1" source="actor-eleve" target="uc-test-knowledge" edge="1">
           <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="hi8S8jJJ274nu1eD_c6z-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="hi8S8jJJ274nu1eD_c6z-2" target="uc-delete-country">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="hi8S8jJJ274nu1eD_c6z-2" value="La gestion des pays" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="270" y="191" width="200" height="170" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
