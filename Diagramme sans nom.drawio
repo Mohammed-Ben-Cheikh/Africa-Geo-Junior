@@ -1,0 +1,68 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0" version="25.0.3">
+  <diagram id="useCaseDiagram" name="Cas d&#39;utilisation">
+    <mxGraphModel dx="1050" dy="658" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="actor-admin" value="Administrateur" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" parent="1" vertex="1">
+          <mxGeometry x="100" y="200" width="50" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="hi8S8jJJ274nu1eD_c6z-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="124" y="487" as="targetPoint" />
+            <mxPoint x="124" y="327" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="124" y="437" />
+              <mxPoint x="124" y="437" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="actor-eleve" value="Élève" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" parent="1" vertex="1">
+          <mxGeometry x="100" y="500" width="50" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="uc-add-country" value="Ajouter un pays" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="560" y="131" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="uc-modify-country" value="Modifier un pays" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="590" y="244" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="uc-delete-country" value="Supprimer un pays" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="570" y="361" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="uc-display-countries" value="Afficher les pays" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="300" y="500" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="uc-test-knowledge" value="Tester ses connaissances" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="300" y="600" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="conn-admin-add" style="edgeStyle=orthogonalEdgeStyle;" parent="1" target="uc-add-country" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="150" y="261" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="355" y="261" />
+              <mxPoint x="355" y="161" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="conn-admin-modify" style="edgeStyle=orthogonalEdgeStyle;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" target="uc-modify-country" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="140" y="261" as="sourcePoint" />
+            <mxPoint x="580" y="291" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="conn-eleve-display" style="edgeStyle=orthogonalEdgeStyle;" parent="1" source="actor-eleve" target="uc-display-countries" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="conn-eleve-test" style="edgeStyle=orthogonalEdgeStyle;" parent="1" source="actor-eleve" target="uc-test-knowledge" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="hi8S8jJJ274nu1eD_c6z-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="hi8S8jJJ274nu1eD_c6z-2" target="uc-delete-country">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="hi8S8jJJ274nu1eD_c6z-2" value="La gestion des pays" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="270" y="191" width="200" height="170" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
