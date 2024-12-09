@@ -130,5 +130,3 @@ JOIN
 LEFT JOIN 
     villes v ON p.id_pays = v.id_pays;
 
-
-
