@@ -4,10 +4,13 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="70c2ROdEBI9SirnErz0y-1" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="204" y="81" width="580" height="620" as="geometry" />
+        </mxCell>
         <mxCell id="actor-admin" value="Administrateur" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" parent="1" vertex="1">
           <mxGeometry x="100" y="202" width="50" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="hi8S8jJJ274nu1eD_c6z-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1">
+        <mxCell id="hi8S8jJJ274nu1eD_c6z-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="124" y="487" as="targetPoint" />
             <mxPoint x="124" y="327" as="sourcePoint" />
@@ -56,10 +59,10 @@
         <mxCell id="conn-eleve-test" style="edgeStyle=orthogonalEdgeStyle;" parent="1" source="actor-eleve" target="uc-test-knowledge" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="hi8S8jJJ274nu1eD_c6z-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="hi8S8jJJ274nu1eD_c6z-2" target="uc-delete-country">
+        <mxCell id="hi8S8jJJ274nu1eD_c6z-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="hi8S8jJJ274nu1eD_c6z-2" target="uc-delete-country" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="hi8S8jJJ274nu1eD_c6z-2" value="La gestion des pays" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="hi8S8jJJ274nu1eD_c6z-2" value="La gestion des pays" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="270" y="191" width="200" height="170" as="geometry" />
         </mxCell>
       </root>
