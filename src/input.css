@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+#main-content{
+    background-image: url("http://codeshogun.free.nf/gallery_gen/0db50c06d26149f56b8e4c020e41671d_fit.jpg?ts=1733822507");
+    border-width: 1rem 1rem 0 1rem;
+    border-color: rgb(31,41,55);
+}
+
+#sidebar{
+    background-image: url("https://cdn.vectorstock.com/i/1000v/10/19/africa-sketch-vector-6561019.jpg");
+    background-position: top;
+    border-width: 1rem 1rem 0 1rem;
+    border-color: rgb(31,41,55);
+}
+
+header{
+    background-image: url("http://codeshogun.free.nf/gallery_gen/0db50c06d26149f56b8e4c020e41671d_fit.jpg?ts=1733822507");
+    border-width: 0 1rem 1rem 1rem;
+    border-color: rgb(31,41,55);
+}

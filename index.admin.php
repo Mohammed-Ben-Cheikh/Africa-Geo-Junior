@@ -7,16 +7,17 @@
     <title>Liste des Pays et Villes</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./src/output.css">
+    <link rel="stylesheet" href="./src/input.css">
 </head>
 
 <body class="bg-gray-100 h-screen">
     <div class="min-w-full fixed">
         <nav class="bg-gray-800">
             <div class="min-w-full px-4 sm:px-6 lg:px-8">
-                <div class="flex h-16 items-center justify-between">
+                <div class="flex h-20 items-center justify-between">
                     <div class="flex items-center">
                         <div class="shrink-0">
-                            <img class="w-40 h-10" src="https://intranet.youcode.ma/src/img/logo-white.png"
+                            <img class="w-44 h-12" src="http://codeshogun.free.nf/gallery/logo.png?ts=1733825165"
                                 alt="Your Company">
                         </div>
                         <div class="hidden md:block">
@@ -160,14 +161,19 @@
             </div>
         </nav>
 
-        <header class="bg-white shadow-sm">
+        <header class="shadow-sm">
             <div class="max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-                <h1 class="text-3xl font-bold tracking-tight text-gray-900">Dashboard</h1>
+                <a class="flex items-center gap-2 bg-gray-800 py-2 px-4 rounded text-white hover:bg-gray-900 transition-colors w-48 text-xl" href="#blog">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7c0 1.19-.51 2.27-1.33 3.02M3 7a6.002 6.002 0 0011.33 3.02M5.67 5A2.5 2.5 0 007 5h2a2.5 2.5 0 012.5 2.5m-.5 4.5V21m-3 0H9m6 0h-3" />
+                    </svg>
+                    Dashboard
+                </a>
             </div>
         </header>
     </div>
 
-    <main class="mx-auto max-h-[92.9%] flex pt-36">
+    <main class="mx-auto max-h-[92.9%] flex pt-44">
         <section class="w-[15%] p-2 border-r flex flex-col gap-3 border-gray-300 bg-gray-100" id="sidebar">
             <!-- Accueil -->
             <a class="flex items-center gap-2 bg-gray-800 py-2 px-4 rounded text-white hover:bg-gray-900 transition-colors" href="#">
@@ -235,12 +241,12 @@
             // Tableau de bord
             echo "
             <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-4'>
-                <div class='bg-white p-4 rounded-lg shadow hover:shadow-lg transition-shadow duration-300'>
+                <div class='bg-white p-4 border-8 border-gray-800  rounded-lg shadow hover:shadow-lg transition-shadow duration-300'>
                     <h2 class='text-xl mb-2'>Total des Pays</h2>
                     <p class='text-3xl font-bold text-blue-600'>" . $stats['total_pays'] . "</p>
                 </div>
 
-                <div class='bg-white p-4 rounded-lg shadow hover:shadow-lg transition-shadow duration-300'>
+                <div class='bg-white p-4 border-8 border-gray-800  rounded-lg shadow hover:shadow-lg transition-shadow duration-300'>
                     <h2 class='text-xl mb-2'>Total des Villes</h2>
                     <p class='text-3xl font-bold text-blue-600'>" . $stats['total_villes'] . "</p>
                 </div>
@@ -270,7 +276,7 @@
             $result = $conn->query($sql);
             if ($result->num_rows > 0) {
                 echo "<div class='w-full h-[50vh] overflow-auto'>";
-                echo "<table class='min-w-full bg-white border border-gray-300 rounded-lg shadow'><thead><tr class='bg-blue-200'><th class='border px-4 py-2'>ID Pays</th><th class='border px-4 py-2'>Nom Pays</th><th class='border px-4 py-2'>Population</th><th class='border px-4 py-2'>Langues Officielles</th><th class='border px-4 py-2'>Continent</th><th class='border px-4 py-2'>ID Ville</th><th class='border px-4 py-2'>Nom Ville</th><th class='border px-4 py-2'>Description</th><th class='border px-4 py-2'>Type</th></tr></thead><tbody>";
+                echo "<table class='border-8 border-gray-800 min-w-full bg-white rounded-lg shadow'><thead><tr class='bg-blue-200'><th class='border px-4 py-2'>ID Pays</th><th class='border px-4 py-2'>Nom Pays</th><th class='border px-4 py-2'>Population</th><th class='border px-4 py-2'>Langues Officielles</th><th class='border px-4 py-2'>Continent</th><th class='border px-4 py-2'>ID Ville</th><th class='border px-4 py-2'>Nom Ville</th><th class='border px-4 py-2'>Description</th><th class='border px-4 py-2'>Type</th></tr></thead><tbody>";
                 while ($row = $result->fetch_assoc()) {
                     echo "<tr class='hover:bg-blue-100 transition-colors duration-200'>
                         <td class='border px-4 py-2'>" . $row["id_pays"] . "</td>
@@ -333,6 +339,8 @@
             } else {
                 echo "<p class='text-red-500'>0 résultats</p>";
             }
+            $sql = "SELECT * FROM pays";
+            $result = $conn->query($sql);
             $conn->close();
             ?>
         </section>
