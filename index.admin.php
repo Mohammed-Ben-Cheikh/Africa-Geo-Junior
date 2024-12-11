@@ -222,6 +222,7 @@
 
         <section class="w-[85%] p-4 overflow-y-auto" id="main-content">
             <?php
+            
             $servername = "127.0.0.1";
             $username = "root";
             $password = "123456789";
@@ -272,9 +273,9 @@
                 Continents c ON p.id_Continent = c.id_Continent
             LEFT JOIN 
                 villes v ON p.id_pays = v.id_pays
-        ";
+        "; 
             $result = $conn->query($sql);
-            if ($result->num_rows > 0) {
+            if ($result->num_rows > 0) {    
                 echo "<div class='w-full h-[50vh] overflow-auto'>";
                 echo "<table class='border-8 border-gray-800 min-w-full bg-white rounded-lg shadow'><thead><tr class='bg-blue-200'><th class='border px-4 py-2'>ID Pays</th><th class='border px-4 py-2'>Nom Pays</th><th class='border px-4 py-2'>Population</th><th class='border px-4 py-2'>Langues Officielles</th><th class='border px-4 py-2'>Continent</th><th class='border px-4 py-2'>ID Ville</th><th class='border px-4 py-2'>Nom Ville</th><th class='border px-4 py-2'>Description</th><th class='border px-4 py-2'>Type</th></tr></thead><tbody>";
                 while ($row = $result->fetch_assoc()) {
