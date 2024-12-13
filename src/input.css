@@ -9,6 +9,11 @@
     border-color: rgb(31,41,55);
 }
 
+#body{
+    background-image: url("http://codeshogun.free.nf/gallery_gen/0db50c06d26149f56b8e4c020e41671d_fit.jpg?ts=1733822507");
+    background-size: cover;
+}
+
 #sidebar{
     background-image: url("https://cdn.vectorstock.com/i/1000v/10/19/africa-sketch-vector-6561019.jpg");
     background-position: top;

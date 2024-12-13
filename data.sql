@@ -28,7 +28,7 @@ CREATE TABLE `pays` (
         'Australie'
     ) DEFAULT 'Afrique',
     `id_Continent` int(11),
-    FOREIGN KEY (`id_Continent`) REFERENCES `Continents` (`id_Continent`)
+    FOREIGN KEY (`id_Continent`) REFERENCES `Continents` (`id_Continent`) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 CREATE TABLE `villes` (
@@ -37,7 +37,7 @@ CREATE TABLE `villes` (
     `Description` text DEFAULT NULL,
     `Type` enum('capitale', 'autre'),
     `id_pays` int(11),
-    FOREIGN KEY (`id_pays`) REFERENCES `pays` (`id_pays`)
+    FOREIGN KEY (`id_pays`) REFERENCES `pays`(`id_pays`) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 CREATE TABLE `user` (
@@ -349,29 +349,3 @@ VALUES (
         'autre',
         6
     );
-
-select * from villes;
-
-select * from pays;
-
-select * from continents;
-
-UPDATE `pays`
-SET
-    `nom` = 'New Name',
-    `Population` = 1000000,
-    `langues_officielles` = 'New Language',
-    `Continent` = 'New Continent',
-    `id_Continent` = 1
-WHERE
-    `id_pays` = 1;
-
-DELETE FROM `pays` WHERE nom = '++++++';
-
-ALTER TABLE `pays` ADD `best_place` varchar(100) NOT NULL;
-
-ALTER TABLE c`pays` DROP COLUMN `best_place`;
-
-ALTER TABLE `pays` CHANGE COLUMN `best_place` `fav_place` VARCHAR(255);
-
-ALTER TABLE `pays` MODIFY COLUMN `best_place` int;
