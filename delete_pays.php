@@ -6,11 +6,6 @@ $dbname = "africadata";
 
 // Créer la connexion
 $conn = mysqli_connect($servername, $username, $password, $dbname);
-$x;
-
-if(empty($x)){
-
-}
 // Vérifier la connexion
 if (!$conn) {
     die("Erreur de connexion : " . mysqli_connect_error());

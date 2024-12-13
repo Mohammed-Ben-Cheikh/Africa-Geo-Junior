@@ -1,6 +1,4 @@
 <?php
-session_start(); // Démarrer la session pour pouvoir utiliser $_SESSION
-
 $servername = "127.0.0.1";
 $username = "root";
 $password = "123456789";
@@ -65,14 +63,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <form method="POST" class="space-y-4">
             <div>
                 <label for="Nom" class="block text-sm font-medium text-gray-700">Nom du Pays</label>
-                <input type="text" id="Nom" name="Nom" value="<?php echo htmlspecialchars($row['nom']); ?>"
+                <input type="text" id="Nom" name="Nom" value="<?php echo $row['nom']; ?>"
                     class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                     placeholder="Entrez le nom du pays" required aria-label="Nom du pays">
             </div>
             <div>
                 <label for="Population" class="block text-sm font-medium text-gray-700">Population</label>
                 <input type="number" id="Population" name="Population"
-                    value="<?php echo htmlspecialchars($row['Population']); ?>"
+                    value="<?php echo $row['Population'] ?>"
                     class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                     placeholder="Entrez la population" required aria-label="Population">
             </div>
@@ -80,7 +78,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <label for="langues_officielles" class="block text-sm font-medium text-gray-700">Langues
                     Officielles</label>
                 <input type="text" id="langues_officielles" name="langues_officielles"
-                    value="<?php echo htmlspecialchars($row['langues_officielles']); ?>"
+                    value="<?php echo $row['langues_officielles']; ?>"
                     class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                     placeholder="Entrez les langues officielles" required aria-label="Langues officielles">
             </div>
@@ -101,7 +99,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         while ($continent1 = $result_continents->fetch_assoc()) {
                             // Ajout de l'attribut data-id pour stocker l'ID du continent
                             $selected = ($continent1['nom'] == $row['Continent']) ? "selected" : "";
-                            echo "<option value='" . htmlspecialchars($continent1['nom']) . "' data-id='" . htmlspecialchars($continent1['id_Continent']) . "' $selected>" . htmlspecialchars($continent1['nom']) . "</option>";
+                            echo "<option value='" . $continent1['nom'] . "' data-id='" . $continent1['id_Continent'] . "' $selected>" . $continent1['nom'] . "</option>";
                         }
                     } else {
                         echo "<option value=''>Aucun continent disponible</option>";
@@ -112,7 +110,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div>
                 <label for="id_Continent" class="block text-sm font-medium text-gray-700">ID du Continent</label>
                 <input type="text" id="id_Continent" name="id_Continent"
-                    value="<?php echo htmlspecialchars($row['id_Continent']); ?>"
+                    value="<?php echo $row['id_Continent']
+                    ; ?>"
                     class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                     placeholder="Entrez l'ID du continent" required aria-label="ID du continent" readonly>
             </div>

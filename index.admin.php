@@ -160,7 +160,7 @@
             </div>
         </nav>
 
-        <header class="shadow-sm h-16 flex items-center ">
+        <header class="shadow-sm h-20 flex items-center ">
             <div class="max-w-7xl ml-6">
                 <a class="flex items-center gap-2 bg-gray-800 py-2 px-4 rounded text-white hover:bg-gray-900 transition-colors w-48 text-xl"
                     href="#blog">

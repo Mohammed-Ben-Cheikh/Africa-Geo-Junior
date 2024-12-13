@@ -730,6 +730,10 @@ video {
   height: 4rem;
 }
 
+.h-24 {
+  height: 6rem;
+}
+
 .max-h-\[50vh\] {
   max-height: 50vh;
 }
@@ -1115,6 +1119,10 @@ video {
 
 .pt-44 {
   padding-top: 11rem;
+}
+
+.pt-40 {
+  padding-top: 10rem;
 }
 
 .text-center {

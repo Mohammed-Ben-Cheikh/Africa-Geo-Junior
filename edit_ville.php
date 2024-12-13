@@ -101,7 +101,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     if ($result_pays->num_rows > 0) {
                         while ($pays = $result_pays->fetch_assoc()) {
                             $selected = ($pays['id_pays'] == $row['id_pays']) ? 'selected' : '';
-                            echo "<option value='" . htmlspecialchars($pays['nom']) . "' data-id='" . htmlspecialchars($pays1['id_pays']) . "' $selected>" . htmlspecialchars($pays['nom']) . "</option>";
+                            echo "<option value='" . htmlspecialchars($pays['nom']) . "' data-id='" . htmlspecialchars($pays['id_pays']) . "' $selected>" . htmlspecialchars($pays['nom']) . "</option>";
                         }
                     } else {
                         echo "<option value=''>Aucun pays disponible</option>";

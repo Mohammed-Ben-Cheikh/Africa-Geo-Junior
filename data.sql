@@ -1,6 +1,6 @@
 CREATE DATABASE africadata;
 
-use africadata;
+USE africadata;
 
 CREATE TABLE `Continents` (
     `id_Continent` int(11) AUTO_INCREMENT PRIMARY KEY NOT NULL,
