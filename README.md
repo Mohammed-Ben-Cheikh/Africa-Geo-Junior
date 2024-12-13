@@ -1,6 +1,6 @@
 # Africa-Geo-Junior - Site éducatif interactif sur l'Afrique
 
-![Alt Text]('./img/326shots_so.png')
+![Alt Text](/img/326shots_so.png)
 
 ## Description
 GeoEducation est un site web interactif conçu pour les élèves. Ce projet vise à enrichir leurs connaissances géographiques sur le continent africain en leur permettant de découvrir les pays, leurs capitales, et leurs villes clés. Il offre également des jeux interactifs pour tester les connaissances des élèves.
